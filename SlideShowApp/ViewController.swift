@@ -85,14 +85,20 @@ class ViewController: UIViewController {
         //ナンバーの初期化
         i = 0
         
-        let gesture = UITapGestureRecognizer(target:self, action:Selector(("didClickImageView:")))
-        //image_view.addGestureRecognizer(gesture)
+        //タップ処理
+        let gesture = UITapGestureRecognizer(target:self, action:#selector(self.didClickImageView(_:)))
+        image_view.addGestureRecognizer(gesture)
+        image_view.isUserInteractionEnabled = true
         
     }
     
-    func didClickImageView(recognizer: UIGestureRecognizer) {
-        print ("Swift")
+    func didClickImageView(_ sender: UIGestureRecognizer) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "second") as! SecondViewController
+        nextView.i = i
+        self.present(nextView, animated: true, completion: nil)
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

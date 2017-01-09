@@ -43,24 +43,23 @@
                                     <action selector="fbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zm-wU-rVk"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Xs-pk-teU">
-                                <rect key="frame" x="67" y="196" width="256" height="194"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Xs-pk-teU">
+                                <rect key="frame" x="59" y="195" width="256" height="194"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="194" id="5WF-YT-tbt"/>
+                                    <constraint firstAttribute="height" constant="194" id="OGq-mY-fZi"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1Xs-pk-teU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="2sK-kn-gwc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1Xs-pk-teU" secondAttribute="trailing" constant="36" id="G2B-uP-uC2"/>
-                            <constraint firstItem="1Xs-pk-teU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GhO-O9-FxC"/>
+                            <constraint firstItem="1Xs-pk-teU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="43" id="KbH-wm-og6"/>
                             <constraint firstItem="LCT-26-LqM" firstAttribute="leading" secondItem="qtv-bB-3K3" secondAttribute="trailing" constant="50" id="KoW-rF-Aao"/>
                             <constraint firstItem="qtv-bB-3K3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PX1-hq-vhO"/>
+                            <constraint firstItem="1Xs-pk-teU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="Xwl-Eh-yL4"/>
                             <constraint firstItem="qtv-bB-3K3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="520" id="a69-cH-pQU"/>
                             <constraint firstItem="qtv-bB-3K3" firstAttribute="leading" secondItem="HAb-0x-XwJ" secondAttribute="trailing" constant="50" id="ccq-Yz-EiB"/>
                             <constraint firstItem="LCT-26-LqM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="520" id="dvH-mV-ktd"/>
-                            <constraint firstItem="1Xs-pk-teU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="176" id="exZ-rH-IA4"/>
+                            <constraint firstItem="1Xs-pk-teU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyZ-hz-5pw"/>
                             <constraint firstItem="HAb-0x-XwJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="520" id="l0J-eq-Mfx"/>
                         </constraints>
                     </view>
@@ -78,7 +77,7 @@
         <!--Second View Controller-->
         <scene sceneID="A3R-vm-BvR">
             <objects>
-                <viewController id="gtE-j5-PtN" customClass="SecondViewController" customModule="SlideShowApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="gtE-j5-PtN" customClass="SecondViewController" customModule="SlideShowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6sB-XJ-JrY"/>
                         <viewControllerLayoutGuide type="bottom" id="WNQ-jD-3Xx"/>
@@ -94,18 +93,32 @@
                                     <segue destination="Ctu-xi-R9A" kind="unwind" unwindAction="unwindWithSegue:" id="fjl-oY-FpV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRo-wb-dfZ">
+                                <rect key="frame" x="1" y="152" width="374" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="7eC-4L-bCf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dRW-sX-1YM" firstAttribute="top" secondItem="sRo-wb-dfZ" secondAttribute="bottom" constant="104" id="0X7-Ly-L88"/>
                             <constraint firstItem="dRW-sX-1YM" firstAttribute="centerX" secondItem="ntT-Oh-2bP" secondAttribute="centerX" id="ALf-Ki-kB5"/>
                             <constraint firstItem="dRW-sX-1YM" firstAttribute="top" secondItem="6sB-XJ-JrY" secondAttribute="bottom" constant="520" id="RPW-ue-fB1"/>
+                            <constraint firstAttribute="trailing" secondItem="sRo-wb-dfZ" secondAttribute="trailing" id="VEs-s1-Dhn"/>
+                            <constraint firstItem="sRo-wb-dfZ" firstAttribute="top" secondItem="6sB-XJ-JrY" secondAttribute="bottom" constant="132" id="WJ6-al-EwX"/>
+                            <constraint firstItem="sRo-wb-dfZ" firstAttribute="leading" secondItem="ntT-Oh-2bP" secondAttribute="leading" id="q2P-1w-UX1"/>
+                            <constraint firstItem="sRo-wb-dfZ" firstAttribute="centerX" secondItem="ntT-Oh-2bP" secondAttribute="centerX" id="zHS-eM-4BI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image_view_large" destination="sRo-wb-dfZ" id="471-Me-zKh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXF-We-TiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ctu-xi-R9A" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="878" y="93"/>
+            <point key="canvasLocation" x="877.60000000000002" y="92.203898050974516"/>
         </scene>
     </scenes>
 </document>
