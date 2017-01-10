@@ -93,6 +93,11 @@ class ViewController: UIViewController {
     }
     
     func didClickImageView(_ sender: UIGestureRecognizer) {
+        self.button_outlet.setTitle("再生", for: .normal)
+        self.bbutton_outlet.isEnabled = true
+        self.fbutton_outlet.isEnabled = true
+        timer.invalidate()
+        button_mode = false
         let storyboard: UIStoryboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "second") as! SecondViewController
         nextView.i = i
